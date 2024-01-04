@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1058066649135",
+    "project_id": "census-95fc4",
+    "storage_bucket": "census-95fc4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058066649135:android:39a915050d7b2b4560f6da",
+        "android_client_info": {
+          "package_name": "com.example.firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLbacd8BogIMHHQFavrN2c-cIvpFo1dAQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058066649135:android:59fa476fa8ed221060f6da",
+        "android_client_info": {
+          "package_name": "com.himanshu.project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLbacd8BogIMHHQFavrN2c-cIvpFo1dAQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
