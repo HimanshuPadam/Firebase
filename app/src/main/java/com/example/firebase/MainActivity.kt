@@ -11,7 +11,7 @@ import com.google.firebase.database.database
 
 class MainActivity : AppCompatActivity() {
 
-//    val database = Firebase.database
+//    val firebaseDatabase = Firebase.firebaseDatabase
     val myRef = Firebase.database.getReference("Details")
     lateinit var binding: ActivityMainBinding
 
