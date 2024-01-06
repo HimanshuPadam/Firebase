@@ -3,6 +3,7 @@ package com.example.firebase
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import com.example.firebase.databinding.ActivityAddCourseBinding
 import com.google.firebase.database.DataSnapshot
@@ -32,6 +33,8 @@ class AddCourseActivity : AppCompatActivity() {
         databaseReference=firebaseDatabase.getReference("courses")
 
         binding.idBtnAddCourse.setOnClickListener {
+            binding.idPBLoading.visibility= View.VISIBLE
+
             courseName=binding.idEditCourseName.text.toString()
             coursePrice= binding.idEditCoursePrice.text.toString()
             suitedFor= binding.idEditCourseSuitedFor.text.toString()
@@ -45,6 +48,9 @@ class AddCourseActivity : AppCompatActivity() {
 
             databaseReference.addValueEventListener(object :ValueEventListener{
                 override fun onDataChange(snapshot: DataSnapshot) {
+
+                    binding.idPBLoading.visibility= View.GONE
+
                     databaseReference.child(courseId!!).setValue(courseRVModal)
                     Toast.makeText(this@AddCourseActivity,"Course Added Successfully",Toast.LENGTH_SHORT)
                         .show()
@@ -52,10 +58,11 @@ class AddCourseActivity : AppCompatActivity() {
                 }
 
                 override fun onCancelled(error: DatabaseError) {
-                    Toast.makeText(this@AddCourseActivity,"Error is $error",Toast.LENGTH_SHORT)
+                    binding.idPBLoading.visibility= View.VISIBLE
+
+                    Toast.makeText(this@AddCourseActivity,"Failed to Add....Error is $error",Toast.LENGTH_SHORT)
                         .show()
                 }
-
             })
         }
     }

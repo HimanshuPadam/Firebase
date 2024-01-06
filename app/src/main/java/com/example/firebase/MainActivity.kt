@@ -11,8 +11,6 @@ import com.google.firebase.database.database
 
 class MainActivity : AppCompatActivity() {
 
-//    val firebaseDatabase = Firebase.firebaseDatabase
-    val myRef = Firebase.database.getReference("Details")
     lateinit var binding: ActivityMainBinding
 
 
@@ -21,16 +19,5 @@ class MainActivity : AppCompatActivity() {
         binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        id= myRef.push().key
-
-
-        binding.btnSubmit.setOnClickListener {
-
-            myRef.child(id!!).setValue(model).addOnSuccessListener {
-                Toast.makeText(this, "SUCCESS", Toast.LENGTH_SHORT).show()
-            }.addOnFailureListener {
-                Toast.makeText(this, "FAILURE", Toast.LENGTH_SHORT).show()
-            }
-        }
     }
 }
