@@ -35,7 +35,7 @@
             android:name=".AddCourseActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivityDuplicate"
             android:exported="false" />
     </application>
 
