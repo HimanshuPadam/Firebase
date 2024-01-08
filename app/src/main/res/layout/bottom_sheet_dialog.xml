@@ -3,14 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/idCLBSheet"
     android:background="@color/blue_shade_1">
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/idTVCourseName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:text="Course Name"
         android:padding="4dp"
@@ -18,5 +18,83 @@
         android:textSize="15sp"
         android:textStyle="bold"
         />
+    
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/idTVCourseName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@mipmap/ic_launcher"
+        android:layout_margin="4dp"
+        android:padding="4dp"
+        android:id="@+id/idIVCourse"
+        />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:id="@+id/idTVDescription"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/idTVCourseName"
+        app:layout_constraintTop_toBottomOf="@id/idTVCourseName"
+        android:padding="3dp"
+        android:layout_margin="4dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Suited for"
+        android:id="@+id/idTVSuitedFor"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/idTVCourseName"
+        app:layout_constraintTop_toBottomOf="@id/idTVDescription"
+        android:padding="3dp"
+        android:layout_margin="4dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:id="@+id/idTVCoursePrice"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/idTVCourseName"
+        app:layout_constraintTop_toBottomOf="@id/idTVSuitedFor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="3dp"
+        android:layout_margin="4dp"
+        />
+
+    <Button
+        android:id="@+id/idBtnEditCourse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintTop_toBottomOf="@id/idIVCourse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/idBtnViewDetails"
+        android:background="@drawable/custom_button_back"
+        android:textColor="@color/white"
+        android:text="Edit Course"
+        android:textAllCaps="false"
+        />
+
+    <Button
+        android:id="@+id/idBtnViewDetails"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintTop_toBottomOf="@id/idIVCourse"
+        app:layout_constraintStart_toEndOf="@id/idBtnEditCourse"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/custom_button_back"
+        android:textColor="@color/white"
+        android:text="Delete Course"
+        android:textAllCaps="false"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

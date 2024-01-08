@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/idCLHome"
     android:background="@color/blue_shade_1"
-    tools:context=".MainActivityDuplicate">
+    tools:context=".MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
